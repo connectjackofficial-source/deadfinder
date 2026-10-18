@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deadfinder"
+version = "0.1.0"
+description = "AST-based dead code detector: unused imports, uncalled functions."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Jack"}]
+keywords = ["linter", "dead-code", "refactoring", "static-analysis", "python"]
+
+[project.scripts]
+deadfinder = "deadfinder.cli:main"
+
+[tool.setuptools]
+packages = ["deadfinder"]
